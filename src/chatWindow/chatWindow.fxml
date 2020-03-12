@@ -3,7 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.geometry.Insets?>
 <BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="chatWindow.Controller">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
     <top>
         <MenuBar>
             <Menu fx:id="msgMenu" mnemonicParsing="true" text="_Message">
