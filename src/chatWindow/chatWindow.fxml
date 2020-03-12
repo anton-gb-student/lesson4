@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="chatWindow.Controller">
+    <top>
+        <MenuBar>
+            <Menu fx:id="msgMenu" mnemonicParsing="true" text="_Message">
+                <MenuItem fx:id="mnuSend" mnemonicParsing="true" text="_Send" onAction="#mnuSend" />
+                <MenuItem fx:id="mnuQuote" mnemonicParsing="true" text="_Quote" onAction="#mnuQuote" />
+                <Menu fx:id="mnuEmoji" mnemonicParsing="true" text="_Emoji"  >
+                    <MenuItem fx:id="smileEmo" text=":-)" onAction="#smileEmo" />
+                    <MenuItem fx:id="sadEmo" text=":-(" onAction="#sadEmo" />
+                    <MenuItem fx:id="crazyEmo" text="\%)" onAction="#crazyEmo" />
+                </Menu>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <TextArea fx:id="mainWindow" wrapText="true" editable="false"/>
+    </center>
+    <bottom>
+        <VBox>
+            <TextArea fx:id="inputField" prefRowCount="3" onKeyPressed="#inputSend"/>
+            <ButtonBar>
+                <buttons>
+                    <Button fx:id="btnQuote" text="_Quote" mnemonicParsing="true" onAction="#mnuQuote"/>
+                    <Button fx:id="btnSend" text="Sen_d" mnemonicParsing="true" onAction="#mnuSend"/>
+                </buttons>
+            </ButtonBar>
+        </VBox>
+    </bottom>
+
+
+</BorderPane>
